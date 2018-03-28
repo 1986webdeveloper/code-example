@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2016 acquaintsoft.com. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="agc" method="upgrade">
+	<name>plg_agc_acquaintsoftech</name>
+	<author>Acquaint Softech</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (c) 2016 acquaintsoft.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+		<p>The plugin provides embed code for youtube videos.</p>
+	]]>
+	</description>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_agc_acquaintsoftech.ini</language>
+		<language tag="en-GB">en-GB.plg_agc_acquaintsoftech.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="acquaintsoftech">acquaintsoftech.php</filename>
+		<folder>tmpl/</folder>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="Basic">
+				<field name="moduleclass_sfx"
+					type="text" default=""
+					label="MODSFX"
+					description="MODSFX_DESC" />
+
+				<field name="youtube_id"
+					type="text" default=""
+					label="YOUTUBE_ID"
+					description="YOUTUBE_ID_DESC" />
+
+				<field name="width"
+					type="text"
+					default="300"
+					label="WIDTH"
+					description="WIDTH_DESC" />
+
+				<field name="height"
+					type="text"
+					default="200"
+					label="HEIGHT"
+					description="HEIGHT_DESC" />
+
+					<field name="responsive"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="RESPONSIVE"
+					description="RESPONSIVE_DESC">
+						<option value="1">Enable</option>
+						<option value="0">Disable</option>
+					</field>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
